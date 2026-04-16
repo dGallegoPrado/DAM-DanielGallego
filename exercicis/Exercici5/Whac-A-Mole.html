@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topito Topez</title>
+</head>
+<style>
+    p { color: rgb(154, 154, 237); font-size: 45px; }
+    .agujero { display: inline-block; margin: 10px; cursor: pointer; }
+    h1{ color: aquamarine; display: flex; justify-content: center;}
+</style>
+<body>
+
+    <h1>Juego del topo</h1>
+
+    <!-- 6 agujeros, cada uno con su imagen de topo, agujero vacío y estrella -->
+    <div class="agujero" onclick="colpejaTalp(0)">
+        <img id="talp0"     src="imagenes_Whac-A-Mole/topoSi.jpg"  style="display:none">
+        <img id="noTopo0"   src="imagenes_Whac-A-Mole/topoNo.jpg"  style="display:block">
+        <img id="estrella0" src="imagenes_Whac-A-Mole/topoPam.jpg" style="display:none">
+    </div>
+    <div class="agujero" onclick="colpejaTalp(1)">
+        <img id="talp1"     src="imagenes_Whac-A-Mole/topoSi.jpg"  style="display:none">
+        <img id="noTopo1"   src="imagenes_Whac-A-Mole/topoNo.jpg"  style="display:block">
+        <img id="estrella1" src="imagenes_Whac-A-Mole/topoPam.jpg" style="display:none">
+    </div>
+    <div class="agujero" onclick="colpejaTalp(2)">
+        <img id="talp2"     src="imagenes_Whac-A-Mole/topoSi.jpg"  style="display:none">
+        <img id="noTopo2"   src="imagenes_Whac-A-Mole/topoNo.jpg"  style="display:block">
+        <img id="estrella2" src="imagenes_Whac-A-Mole/topoPam.jpg" style="display:none">
+    </div>
+    <div class="agujero" onclick="colpejaTalp(3)">
+        <img id="talp3"     src="imagenes_Whac-A-Mole/topoSi.jpg"  style="display:none">
+        <img id="noTopo3"   src="imagenes_Whac-A-Mole/topoNo.jpg"  style="display:block">
+        <img id="estrella3" src="imagenes_Whac-A-Mole/topoPam.jpg" style="display:none">
+    </div>
+    <div class="agujero" onclick="colpejaTalp(4)">
+        <img id="talp4"     src="imagenes_Whac-A-Mole/topoSi.jpg"  style="display:none">
+        <img id="noTopo4"   src="imagenes_Whac-A-Mole/topoNo.jpg"  style="display:block">
+        <img id="estrella4" src="imagenes_Whac-A-Mole/topoPam.jpg" style="display:none">
+    </div>
+    <div class="agujero" onclick="colpejaTalp(5)">
+        <img id="talp5"     src="imagenes_Whac-A-Mole/topoSi.jpg"  style="display:none">
+        <img id="noTopo5"   src="imagenes_Whac-A-Mole/topoNo.jpg"  style="display:block">
+        <img id="estrella5" src="imagenes_Whac-A-Mole/topoPam.jpg" style="display:none">
+    </div>
+
+    <p>Puntuación: <span id="puntuacio">0</span></p>
+
+    <script>
+        document.body.style.backgroundImage = "url('imagenes_Whac-A-Mole/fondoPartida (3) (1).png')";
+        var musica = new Audio('imagenes_Whac-A-Mole/JiJan Resina Music - 08 ｜ El Plan.mp3');
+        musica.loop = true; 
+        musica.volume = 0.5; 
+
+        var puntuacion = 0;
+
+        
+        var estarFuera = [false, false, false, false, false, false];
+
+        function actualizarTap() { //Aparece o no 
+
+            for (var i = 0; i < 6; i++) {
+                estarFuera[i] = false;
+                document.getElementById("talp" + i).style.display = "none";
+                document.getElementById("noTopo" + i).style.display = "block";
+            }
+
+            var agujero1 = Math.floor(Math.random() * 6); 
+            var agujero2 = Math.floor(Math.random() * 6);
+
+            // agujero1
+            estarFuera[agujero1] = true;
+            document.getElementById("talp" + agujero1).style.display = "block";
+            document.getElementById("noTopo" + agujero1).style.display = "none";
+
+            //agujero2
+            estarFuera[agujero2] = true;
+            document.getElementById("talp" + agujero2).style.display = "block";
+            document.getElementById("noTopo" + agujero2).style.display = "none";
+        }
+
+        setInterval(actualizarTap, 1000);
+
+        // FUNCION GOLPEAR
+        function colpejaTalp(numero) {
+
+            //topo afuera
+            if (estarFuera[numero] == true) {
+                puntuacion += 10;
+                //actualizar la puntuación
+                document.getElementById("puntuacio").innerHTML = puntuacion;
+                //topo se esconde
+                estarFuera[numero] = false;
+                document.getElementById("talp" + numero).style.display = "none";
+
+                //imagen estrella 
+                document.getElementById("estrella" + numero).style.display = "block";
+
+                //ocultar estrella 
+                var n = numero; 
+                setTimeout(function() {
+                    document.getElementById("estrella" + n).style.display = "none";
+                    document.getElementById("noTopo" + n).style.display = "block";
+                }, 500);
+
+                //suena sonido al golpear
+                var audio = new Audio('imagenes_Whac-A-Mole/boing.mp3');
+                audio.play();
+            }
+        }
+
+    </script>
+
+</body>
+</html>
