@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Fondo oscuro elegante */
 .navbar {
   background-color: #0A0F2C !important; /* azul marino serio */
@@ -362,4 +363,361 @@ footer {
   /*tamany del botó */
   .btn-responive {
      font-size: 11px; padding: 6px 12px;
+=======
+/* Fondo oscuro elegante */
+.navbar {
+  background-color: #0A0F2C !important; /* azul marino serio */
+  padding: 12px 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+}
+
+/* Marca del navbar */
+.navbar-brand {
+  color: #C9A86A !important; /* dorado suave */
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+/* Links del menú */
+.navbar-nav .nav-link {
+  color: #E5E5E5 !important; /* gris claro elegante */
+  font-size: 1.05rem;
+  margin-right: 12px;
+  transition: color 0.3s ease;
+}
+
+/* Hover de los links */
+.navbar-nav .nav-link:hover {
+  color: #C9A86A ; /* dorado suave */
+}
+
+/* Link activo */
+.navbar-nav .nav-link.active {
+  color: #C9A86A !important;
+  font-weight: 600;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  background-color: #0F153A; /* azul marino más claro */
+  border: 1px solid #C9A86A;
+}
+
+.dropdown-item {
+  color: #E5E5E5;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #C9A86A;
+  color: #0A0F2C;
+}
+
+
+
+/* Input de búsqueda */
+.form-control {
+  background-color: #0F153A;
+  border: 1px solid #C9A86A;
+  color: #E5E5E5;
+}
+
+.form-control::placeholder {
+  color: #A8A8A8;
+}
+.presentacion{
+  width: 100%;
+  text-align: center;
+  font-size: 4.5vw;
+  font-family: "Roboto Slab", serif; 
+  background-color: #E6E9F2;
+
+}
+.imagenPersonal{
+    width:200px;
+    height:200px;
+    margin:20px;
+    border-radius: 50px;   
+}
+
+.imagenBotPresentacion{
+  width: 200px;
+  height: 200px;
+    animation: loop-animacion 2s infinite alternate; /* 2s duración, repite infinito, alterna dirección */
+
+}
+/*SKILLS*/
+.experiencia{
+  padding:40px 40px 60px 40px ;
+}
+.experiencia {
+  padding: 60px 0;
+  background-color: #E6E9F2;
+}
+
+.experiencia-box {
+  padding: 30px 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.experiencia i{
+  font-size: 2vw;
+  color: #bd48dd;
+  background-color:#0a0a23;
+  padding:8px 19px;
+  border-radius: 50%;
+}
+.section-title {
+  font-size: 2vw;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.badges-contenedor {
+  margin-top: 15px;
+}
+
+.badges-contenedor .badge {
+  margin: 5px;
+  font-size: 0.9rem;
+  padding: 8px 14px;
+
+}
+.experiencia-box:hover {
+  background-color: #E6E9F2;         /* Color suave que combina con #0F153A */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transform: translateY(-4px);       /* Sube un poco la caja */
+}
+
+
+
+/*fin ICONOS SKILLS*/
+
+@keyframes loop-animacion {
+  0% { transform: translateX(0); } /* Estado inicial */
+  100% { transform: translateX(100px); } /* Estado final */
+}
+
+
+section {
+  display:flex;
+  flex-direction: column; /*alineat en columnes del contingut*/
+  justify-content: center; /*centrat verticalment*/
+  align-items: center; /*centrat horitzontalment*/  
+}
+
+.sobreMi{
+  background-color: #424b88;
+  color: rgb(249, 238, 238);
+  height: 500px;
+  text-align:center;
+}
+.section-title{
+  font-size: 2.5vw;
+  padding: 10px; /*espaiat entre la capçalera i el contingut*/    
+}
+
+.section-text{
+  font-size: 2vw; /*mida de la font relativa a la pantalla*/
+  padding: 15px 0; /*espaiat entre el text i el contingut*/    
+}
+
+.white-section{
+  color:black;  
+  background-color: white; /*color de fons de la secció clara*/
+  justify-content: space-around;
+}
+.experiencia-title{
+  font-size:2.5vw;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/*Estils generals*/
+.section-title{
+  font-size:clamp(14px,2.5vw,50px); /*defineix el tamany mínim, màxim i òptim de la font*/    
+  font-family:"Vast Shadow"; /*font de la capçalera*/
+  padding: 5px 0; /*espaiat entre la capçalera i el contingut*/    
+}
+.black-text{
+  color: black;
+}
+
+
+/*projectes*/
+.section-description{
+  font-size:clamp(14px,2vw,50px); /*defineix el tamany mínim, màxim i òptim de la font*/    
+  color: #584343;
+}
+
+/*projectes-------------------------------------------------------*/
+.projectes {
+  padding: 40px;
+}
+
+
+.projectes img{
+  height: 100%;
+  width: 100%;
+  padding:10px;
+  border-radius: 10px;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+
+.projectes-container{
+  padding-top: 60px;
+  margin-bottom: 40px;
+}
+
+
+.overlay{
+  transition: all 0.3s ease;
+  opacity: 0;  /*transparència de la capa NO ES VEU*/
+  position: absolute;
+  top:50%;  /*al centre vertical */
+  left: 50%;   /* al centre horitzontal */
+  transform: translate(-50%, -50%);  
+  text-align: center;
+ }
+
+
+ .overlay p{
+  font-size:clamp(14px,2.5vw,30px); /*defineix el tamany mínim, màxim i òptim de la font*/    
+  margin-bottom: 0;
+ }
+
+
+.projecte {
+  position: relative;
+}
+
+
+.projecte:hover img {
+  opacity: 0.2;
+}
+
+
+.projecte:hover .overlay {
+  opacity: 1;
+}
+
+
+.overlay .icones-contenidor {
+  display: flex;
+  flex-direction: column; /*alineat en columnes del contingut*/
+  justify-content: center; /*centrat verticalment*/
+  align-items: center; /*centrat horitzontalment*/  
+}
+
+
+.overlay i {
+  color: black;
+  font-size: 60px;
+  margin: 10px;
+}
+
+
+/*footer-------------------------------------------------------*/
+
+
+footer {
+  min-height: 500px;
+  background-color: #0A1028;
+  color:white;
+}
+
+
+.footer-logo {
+  height: 80px;
+  width: 80px;
+  margin: 10px;
+}
+
+
+.footer-text {
+  padding: 20px;
+  margin-bottom: 30px;
+  font-size:clamp(14px,2.5vw,50px); /*defineix el tamany mínim, màxim i òptim de la font*/    
+  font-family:"Vast Shadow"; /*font de la capçalera*/
+}
+
+
+.social-icons a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  margin: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+  transition: all 0.2s ease-in;
+}
+
+
+.social-icons i {
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.2s ease-in;
+}
+
+
+.social-icons a:hover {
+  background-color: white;
+  border: 2px solid rgb(13, 110, 253);
+}
+
+
+.social-icons a:hover i {
+  color: black;
+}
+
+
+.drets {
+  font-size: 15px;
+  color: #aeaeae;
+  padding: 20px;
+}
+
+.projecte h2{
+  font-size:clamp(19px,2.5vw,30px); 
+  margin: 10px 0;
+}
+
+
+.projecte p{
+  font-size:clamp(14px,2vw,25px);  
+  margin: 10px 0 30px 0px;
+}
+
+
+
+
+
+/* formato movil
+/* media queries per a dispositius mòbils */
+@media screen and (max-width: 768px) {
+   /*distribució del menu en dispositius mòbils*/
+  .navbar-brand {
+    display: none;
+  }  
+ 
+  /*Secció sobre mi*/
+  .about-me{
+    height: 200px;
+  }
+
+
+  /*tamany del botó */
+  .btn-responive {
+     font-size: 11px; padding: 6px 12px;
+>>>>>>> 7abd782 (a)
   }}

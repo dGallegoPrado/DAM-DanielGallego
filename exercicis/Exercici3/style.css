@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 html,body{
     box-sizing: border-box;
     background: #0A0F2C;
@@ -69,3 +70,76 @@ display:flex; flex-wrap:wrap; gap:50px; justify-content:center; margin-top: 4%;
     transform: scale(1.1);  /* Efecto de agrandado */
 }
 
+=======
+html,body{
+    box-sizing: border-box;
+    background: #0A0F2C;
+    padding: 0;
+}
+.flecha{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    position: absolute;
+    justify-content: left;
+    }
+.flecha img:hover{
+    background-color: azure;
+}
+h1{
+  position: absolute; 
+  top: 10px;         
+  left: 50%;          
+  transform: translateX(-50%); /* ajusta el centrado */
+  color: white;       
+  padding: 10px;
+  border-radius: 6px;
+  height: 90px;
+  font-size: 90px;
+
+}
+.texto{
+  position: absolute;
+  top: 300px;          
+  left: 45%;
+  font-size: 20px;
+  right: 10%;
+  color: white; 
+  font-family:cursive;
+
+}
+
+.imagenesV {
+    display: flex;
+    flex-wrap: wrap;      /* imagen bajo a otra línea */
+    gap: 20px;            /* Espacio entre imágenes (horizontal y vertical) */
+    
+    justify-content: space-around;
+    margin-top: 10px;    /* Para que no se solape con el texto */
+    margin-bottom: 10px;
+    
+}
+.imagenesV img {
+
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.imagenesV img:hover {
+    transform: scale(1.1); /* Efecto agrandar al pasar cursor */
+}
+
+.imagenesH {
+display:flex; flex-wrap:wrap; gap:50px; justify-content:center; margin-top: 4%;
+}
+
+.imagenesH img {
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.imagenesH img:hover {
+    transform: scale(1.1);  /* Efecto de agrandado */
+}
+
+>>>>>>> 7abd782 (a)
